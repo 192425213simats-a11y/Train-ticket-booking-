@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Bookings</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+    <h2>📋 All Train Ticket Bookings</h2>
+
+    {% if bookings %}
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>Passenger Name</th>
+            <th>Train</th>
+            <th>Date</th>
+            <th>Seat</th>
+        </tr>
+
+        {% for b in bookings %}
+        <tr>
+            <td>{{ b.name }}</td>
+            <td>{{ b.train }}</td>
+            <td>{{ b.date }}</td>
+            <td>{{ b.seat }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% else %}
+    <p>No bookings available.</p>
+    {% endif %}
+
+    <br>
+    <a href="/">⬅ Back to Home</a>
+</body>
+</html>
