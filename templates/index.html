@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Ticket Reservation</title>
+</head>
+<body style="font-family: Arial; padding: 30px;">
+    <h1>🚆 Train Ticket Reservation System</h1>
+
+    {% if message %}
+    <p style="color: green; font-weight: bold;">{{ message }}</p>
+    {% endif %}
+
+    <a href="/book-ticket">
+        <button style="padding: 10px; margin-right: 10px;">Book Ticket</button>
+    </a>
+
+    <a href="/view-bookings">
+        <button style="padding: 10px;">View Bookings</button>
+    </a>
+</body>
+</html>
